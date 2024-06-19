@@ -5,14 +5,15 @@ utility code for main.py
 import hashlib
 import time
 
-def sha256(input: str, salt: bool = False):
+
+def sha256(item: str, salt: bool, salt_value: str):
     """
-    hash input with the respective algorithm and return the value. if salt is true then return add. 
+    hash item with the respective algorithm and return the value. if salt is true then return add. 
     """
     if salt:
-        if input.salt_value:
-            salted_data = input.item + input.salt_value
+        if salt_value:
+            salted_data = item + salt_value
         else:
-            salted_data = input.item + str(int(time.time()))
+            salted_data = item + str(int(time.time()))
         return hashlib.sha256(salted_data.encode("utf-8")).hexdigest()
-    return hashlib.sha256(input.item.encode("utf-8")).hexdigest()
+    return hashlib.sha256(item.encode("utf-8")).hexdigest()
