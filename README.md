@@ -15,7 +15,4 @@ python -m unittest -v
 
 # Format
 
-yapf -ir ./main.py
-yapf -ir ./utility.py
-yapf -ir ./test_utility.py
-yapf -ir ./model.py
+Black Formatter

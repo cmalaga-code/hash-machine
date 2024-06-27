@@ -6,9 +6,9 @@ import hashlib
 import time
 
 
-def sha256(item: str, salt: bool, salt_value: str):
+def sha256(item: str, salt: bool, salt_value: str | None):
     """
-    hash item with the respective algorithm and return the value. if salt is true then return add. 
+    hash item with the respective algorithm and return the value. if salt is true then return add.
     """
     if salt:
         if salt_value:
