@@ -20,4 +20,4 @@ async def hash(data: Data):
     if algorithm == "SHA2":
         if salt:
             return {"result": sha256(item, True, salt_value)}
-        return {"result": sha256(item, True, salt_value)}
+        return {"result": sha256(item, False, salt_value)}
