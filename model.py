@@ -7,7 +7,11 @@ from enum import Enum
 
 
 class Algorithm(str, Enum):
-    sha256 = "SHA2"
+    md5 = "MD5"
+    sha1 = "SHA1"
+    sha256 = "SHA256"
+    sha384 = "SHA384"
+    sha512 = "SHA512"
 
 
 class Data(BaseModel):
