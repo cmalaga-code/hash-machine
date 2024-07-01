@@ -1,8 +1,22 @@
 from fastapi import FastAPI
 from model import Data
 from utility import hasher
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+
+origins = [
+    "*",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=False,
+    allow_methods=["POST"],
+    allow_headers=["Content-Type"],
+)
 
 
 @app.get("/")
