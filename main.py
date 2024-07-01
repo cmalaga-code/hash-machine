@@ -18,6 +18,7 @@ app.add_middleware(
     allow_headers=["Content-Type"],
 )
 
+
 @app.get("/")
 @app.post("/")
 async def index():
